@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript">
+      function showStories(the_object){
+        var titles = [];
+        for(var i = 0; i < the_object.results.length; i++){  // the object coming  back from twitter is an object that contains the results in a member named results
+          titles.push("<li>" + the_object.results[i].text + ": " + the_object.results[i].from_user_name + "</li>");
+        }
+        document.getElementById("story_list").innerHTML = titles.join("\n");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Skyrim Stories</h1>
+    Tweet about your adventures in Skyrim using #skyrimstories!
+    <div id="wrapper">
+    <ul id="story_list">
+    </ul>
+    </div>
+    <script type="text/javascript"
+src="http://search.twitter.com/search.json?q=skyrimstories&callback=showStories"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0;
+  background: #000;
+  background-image:url('bg.png');
+  background-repeat: no-repeat;
+  background-position: right top; 
+  
+  color: #ffffff;
+}
+#wrapper {
+  background-color: #444444;
+  width: 900px;
+  opacity: .85;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+#story_list {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 2em;
+  width: 850px;
+  color: #fff;
+  opacity: 1;
+  text-decoration: none;
+  list-style: none;
+  padding: 6px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
