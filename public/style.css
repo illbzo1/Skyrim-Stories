@@ -22,16 +22,19 @@ body {
 #story_list {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
-  line-height: 2em;
-  width: 850px;
+  width: 875px;
   color: #fff;
   opacity: 1;
-  text-decoration: none;
   list-style: none;
   padding: 6px;
   margin-left: auto;
   margin-right: auto;
 }
 
+li {
+  line-height: 3em;
+}
 
-
+li:nth-child(even) {
+  border-bottom: .1em dashed #696969;
+}

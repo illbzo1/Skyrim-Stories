@@ -14,11 +14,12 @@
       })();
 
     </script>
+    
     <script type="text/javascript">
       function showStories(the_object){
         var titles = [];
         for(var i = 0; i < the_object.results.length; i++){  // the object coming  back from twitter is an object that contains the results in a member named results
-          titles.push("<li>" + the_object.results[i].text + ": " + the_object.results[i].from_user_name + "</li>");
+          titles.push("<li>" + "@" + the_object.results[i].from_user + "</li>" + "<li>" + the_object.results[i].text + "</li>");
         }
         document.getElementById("story_list").innerHTML = titles.join("\n");
       }
@@ -32,6 +33,6 @@
     </ul>
     </div>
     <script type="text/javascript"
-src="http://search.twitter.com/search.json?q=skyrimstories&callback=showStories"></script>
+src="http://search.twitter.com/search.json?q=-RT%3A%20%23skyrimstories&callback=showStories"></script>
   </body>
 </html>
