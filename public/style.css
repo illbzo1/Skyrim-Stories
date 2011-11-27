@@ -11,6 +11,14 @@ body {
   
   color: #ffffff;
 }
+
+a {text-decoration:none;}
+
+a:link {color:#FF9900;}      
+a:visited {color:#FF9900;}  
+a:hover {color:#FF6600;}  
+a:active {color:#FF9900;}  
+
 #wrapper {
   background-color: #444444;
   width: 900px;
@@ -36,5 +44,7 @@ li {
 }
 
 li:nth-child(even) {
+  margin-top: -1em;
+  
   border-bottom: .1em dashed #696969;
 }

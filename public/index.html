@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="http://platform.twitter.com/anywhere.js?id=95rD3PJ451OAfizyCumw&v=1" type="text/javascript"></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -10,7 +11,8 @@
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(ga, s);
       })();
 
     </script>
@@ -19,19 +21,40 @@
       function showStories(the_object){
         var titles = [];
         for(var i = 0; i < the_object.results.length; i++){  // the object coming  back from twitter is an object that contains the results in a member named results
-          titles.push("<li>" + "@" + the_object.results[i].from_user + "</li>" + "<li>" + the_object.results[i].text + "</li>");
+          
+          titles.push("<li>" + "@" + the_object.results[i].from_user + "</li>" + "<li>" + the_object.results[i].text.replace(/#skyrimstories/i, " ") + "</li>");
+          
         }
-        document.getElementById("story_list").innerHTML = titles.join("\n");
+        document.getElementById("story_list").innerHTML = titles.join("\n"); 
+      
+        
       }
     </script>
+    
+    <script type="text/javascript">
+      twttr.anywhere(function (T) {
+        T.hovercards();
+      });
+    </script>
+    
+    <script type="text/javascript">
+
+       twttr.anywhere(function (T) {
+         T("#follow-placeholder").followButton('anywhere');
+       });
+
+     </script>
+    
   </head>
   <body>
+    
     <h1>Skyrim Stories</h1>
     Tweet about your adventures in Skyrim using #skyrimstories!
     <div id="wrapper">
     <ul id="story_list">
     </ul>
     </div>
+    
     <script type="text/javascript"
 src="http://search.twitter.com/search.json?q=-RT%3A%20%23skyrimstories&callback=showStories"></script>
   </body>
